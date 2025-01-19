@@ -59,7 +59,7 @@ app.get("/team", (req, res) => {
 
 
 // Configurasi static folder untuk public assets
-app.use("/public", express.static(path.join(__dirname, "src/public")));
+app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Setting folder views dan view engine
 app.set("views", path.join(__dirname, "src/views"));
