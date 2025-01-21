@@ -17,7 +17,14 @@ router.get("/dashboard", (req, res) => {
 
 // Tambahkan route admin lainnya di sini
 router.get("/manage-users", (req, res) => {
-  res.render("admin/manage-users", {
+  res.render("admin/todos", {
+    url: "http://localhost:5050/",
+    username: req.session.username,
+  });
+});
+
+router.get("/kelola-film", (req, res) => {
+  res.render("admin/kelola-film", {
     url: "http://localhost:5050/",
     username: req.session.username,
   });
